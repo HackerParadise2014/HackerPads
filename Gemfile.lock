@@ -1,6 +1,7 @@
 GIT
   remote: git://github.com/activeadmin/activeadmin.git
   revision: 05778f4b7c8e821d584c7b4b08bcd79c02a0db76
+  ref: 05778f4
   specs:
     activeadmin (1.0.0.pre)
       arbre (~> 1.0, >= 1.0.2)
@@ -172,7 +173,7 @@ PLATFORMS
 DEPENDENCIES
   activeadmin!
   coffee-rails (= 4.0.1)
-  devise
+  devise (= 3.4.0)
   jbuilder (= 2.2.2)
   jquery-rails (= 3.1.2)
   pg (= 0.17.1)
