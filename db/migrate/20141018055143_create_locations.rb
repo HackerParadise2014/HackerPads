@@ -8,10 +8,10 @@ class CreateLocations < ActiveRecord::Migration
       t.string  :map_link
       t.decimal :monthly_cost, :precision => 10, :scale => 2 # monetary decimal amounts only
       t.string  :best_flight_month
-      # t.date    :low_season_start
-      # t.date    :low_season_end
-      # t.date    :high_season_start
-      # t.date    :high_season_end
+      t.date    :low_season_startdt
+      t.date    :low_season_enddt
+      t.date    :high_season_startdt
+      t.date    :high_season_enddt
       t.decimal :avg_daily_hrs_sun, :precision => 3, :scale => 1
       t.integer :avg_temp
       t.decimal :avg_internet_up, :precision => 10, :scale => 2

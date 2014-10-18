@@ -49,16 +49,20 @@ ActiveRecord::Schema.define(version: 20141018061924) do
   create_table "locations", force: true do |t|
     t.string   "name"
     t.string   "city"
-    t.string   "ctry",              limit: 2
+    t.string   "ctry",                limit: 2
     t.text     "description"
     t.string   "map_link"
-    t.decimal  "monthly_cost",                precision: 10, scale: 2
+    t.decimal  "monthly_cost",                  precision: 10, scale: 2
     t.string   "best_flight_month"
-    t.decimal  "avg_daily_hrs_sun",           precision: 3,  scale: 1
+    t.date     "low_season_startdt"
+    t.date     "low_season_enddt"
+    t.date     "high_season_startdt"
+    t.date     "high_season_enddt"
+    t.decimal  "avg_daily_hrs_sun",             precision: 3,  scale: 1
     t.integer  "avg_temp"
-    t.decimal  "avg_internet_up",             precision: 10, scale: 2
-    t.decimal  "avg_internet_down",           precision: 10, scale: 2
-    t.decimal  "avg_cost_per_mb",             precision: 10, scale: 2
+    t.decimal  "avg_internet_up",               precision: 10, scale: 2
+    t.decimal  "avg_internet_down",             precision: 10, scale: 2
+    t.decimal  "avg_cost_per_mb",               precision: 10, scale: 2
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "region_id"

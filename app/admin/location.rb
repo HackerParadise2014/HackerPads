@@ -17,7 +17,7 @@ ActiveAdmin.register Location do
   # setting up strong parameters
   permit_params :region_id, :name, :city, :ctry, :description, :map_link, :monthly_cost, 
                 :best_flight_month, :avg_daily_hrs_sun, :avg_temp, 
-                # :low_season_start, :low_season_end, :high_season_start, :high_season_end, 
+                :low_season_startdt, :low_season_enddt, :high_season_startdt, :high_season_enddt, 
                 :avg_cost_per_mb, :avg_internet_up, :avg_internet_down
 
 end
