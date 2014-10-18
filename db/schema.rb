@@ -47,6 +47,10 @@ ActiveRecord::Schema.define(version: 20141018061924) do
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
 
   create_table "locations", force: true do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "ctry"
+    t.text     "description"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "region_id"
@@ -55,6 +59,7 @@ ActiveRecord::Schema.define(version: 20141018061924) do
   add_index "locations", ["region_id"], name: "index_locations_on_region_id"
 
   create_table "regions", force: true do |t|
+    t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
