@@ -60,9 +60,7 @@ ActiveRecord::Schema.define(version: 20141018061924) do
     t.date     "high_season_enddt"
     t.decimal  "avg_daily_hrs_sun",             precision: 3,  scale: 1
     t.integer  "avg_temp"
-    t.decimal  "avg_internet_up",               precision: 10, scale: 2
-    t.decimal  "avg_internet_down",             precision: 10, scale: 2
-    t.decimal  "avg_cost_per_mb",               precision: 10, scale: 2
+    t.text     "internet"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "region_id"

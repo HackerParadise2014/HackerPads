@@ -11,9 +11,11 @@ Region.create(:name => 'Central America')
 Location.create(:name => 'North-West Hanoi', :city => 'Hoi An', :ctry => 'VN', 
   :description => 'A thriving costal city, offers some of the best internet in South-East Asia.', 
   :map_link => 'https://www.google.co.cr/maps/@21.0226967,105.8369637,13z', :monthly_cost => 1077.0, 
-  :best_flight_month => 'Never', :avg_daily_hrs_sun => 0, :region_id => 1, :avg_temp => 30,
+  :best_flight_month => 'Never', :avg_daily_hrs_sun => 0, :region_id => Region.first, :avg_temp => 30,
   :low_season_startdt => Date.strptime("09/01/2009", "%m/%d/%Y"), 
   :low_season_enddt => Date.strptime("09/01/2009", "%m/%d/%Y"), 
   :high_season_startdt => Date.strptime("09/01/2009", "%m/%d/%Y"), 
   :high_season_enddt => Date.strptime("09/01/2009", "%m/%d/%Y"), 
-  :avg_internet_up => 1000.2, :avg_internet_down => 23000.45, :avg_cost_per_mb => 5.10)
+  # :avg_internet_up => 1000.2, :avg_internet_down => 23000.45, :avg_cost_per_mb => 5.10
+  :internet => '{"avg_internet_up" : 1000.2, "avg_internet_down" : 23000.45, "avg_cost_per_mb" : 5.10, "isps" : ["Time Warner","Comcast"]}'
+) 

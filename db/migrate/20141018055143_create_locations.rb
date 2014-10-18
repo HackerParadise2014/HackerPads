@@ -14,9 +14,10 @@ class CreateLocations < ActiveRecord::Migration
       t.date    :high_season_enddt
       t.decimal :avg_daily_hrs_sun, :precision => 3, :scale => 1
       t.integer :avg_temp
-      t.decimal :avg_internet_up, :precision => 10, :scale => 2
-      t.decimal :avg_internet_down, :precision => 10, :scale => 2
-      t.decimal :avg_cost_per_mb, :precision => 10, :scale => 2 # monetary decimal amounts only
+      t.text    :internet
+      # t.decimal :avg_internet_up, :precision => 10, :scale => 2
+      # t.decimal :avg_internet_down, :precision => 10, :scale => 2
+      # t.decimal :avg_cost_per_mb, :precision => 10, :scale => 2 # monetary decimal amounts only
       t.timestamps
     end
   end
