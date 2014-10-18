@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
+  get 'locations/index'
+  root to: 'locations#index'
+
   devise_for :admins, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # The priority is based upon order of creation: first created -> highest priority.
