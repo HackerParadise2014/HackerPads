@@ -23,6 +23,8 @@ gem 'sdoc',         '0.4.1',  group: :doc
 gem 'activeadmin',  github: 'activeadmin', ref: '05778f4'
 # Devise - authentication gem
 gem 'devise',       '3.4.0'
+# GeoCoder gem for map url generation from DB fields
+gem 'geocoder'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

@@ -71,6 +71,7 @@ GEM
     execjs (2.2.2)
     formtastic (3.0.0)
       actionpack (>= 3.2.13)
+    geocoder (1.2.5)
     has_scope (0.6.0.rc)
       actionpack (>= 3.2, < 5)
       activesupport (>= 3.2, < 5)
@@ -174,6 +175,7 @@ DEPENDENCIES
   activeadmin!
   coffee-rails (= 4.0.1)
   devise (= 3.4.0)
+  geocoder
   jbuilder (= 2.2.2)
   jquery-rails (= 3.1.2)
   pg (= 0.17.1)
