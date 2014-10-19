@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141018061924) do
+ActiveRecord::Schema.define(version: 20141019043741) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -67,6 +67,22 @@ ActiveRecord::Schema.define(version: 20141018061924) do
   end
 
   add_index "locations", ["region_id"], name: "index_locations_on_region_id"
+
+  create_table "lodgings", force: true do |t|
+    t.string   "name"
+    t.string   "city"
+    t.string   "lodging_type"
+    t.integer  "beds"
+    t.integer  "bedrooms"
+    t.integer  "capacity"
+    t.decimal  "price_per_night", precision: 7, scale: 2
+    t.boolean  "warning_flag",                            default: false
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "location_id"
+  end
+
+  add_index "lodgings", ["location_id"], name: "index_lodgings_on_location_id"
 
   create_table "regions", force: true do |t|
     t.string   "name"

@@ -1,11 +1,3 @@
-    # This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
-Admin.create!(:email => 'test@test.com', :password => 'password', :password_confirmation => 'password')
 Region.create(:name => 'South-East Asia')
 Region.create(:name => 'Central America')
 Location.create(:name => 'North-West Hanoi', :city => 'Hoi An', :ctry => 'VN', 
@@ -15,7 +7,8 @@ Location.create(:name => 'North-West Hanoi', :city => 'Hoi An', :ctry => 'VN',
   :low_season_enddt => Date.strptime("09/01/2009", "%m/%d/%Y"), 
   :high_season_startdt => Date.strptime("09/01/2009", "%m/%d/%Y"), 
   :high_season_enddt => Date.strptime("09/01/2009", "%m/%d/%Y"), 
-  # :avg_internet_up => 1000.2, :avg_internet_down => 23000.45, :avg_cost_per_mb => 5.10
   :internet => '{"avg_internet_up" : 1000.2, "avg_internet_down" : 23000.45, "avg_cost_per_mb" : 5.10, "isps" : ["Time Warner","Comcast"]}',
   :monthly_cost => 1077.0 
 ) 
+Lodging.create(:location_id => Location.first, :name => "Evil Test Hotel", :city => 'Hanoi', :lodging_type => "Hotel", :price_per_night => 10.00, :beds => 5, :bedrooms => 1, :capacity => 11)
+Lodging.create(:location_id => Location.first, :name => "Nice Test Hotel", :city => 'Hanoi', :lodging_type => "Hotel", :price_per_night => 25.00, :beds => 4, :bedrooms => 4, :capacity => 5)
