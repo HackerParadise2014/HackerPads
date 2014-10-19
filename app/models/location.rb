@@ -1,6 +1,8 @@
 class Location < ActiveRecord::Base
   belongs_to :region
   has_many :lodgings
+  has_many :flights
+  has_many :internets
   before_create :generate_map_link
 
   def generate_map_link
