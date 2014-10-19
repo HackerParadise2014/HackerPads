@@ -1,0 +1,39 @@
+<div class="row main">
+  <div class="col-md-6" id="tagline">
+    <h1 id="tagline-title">Find your next hacker retreat</h1>
+    <p class="tagline-text">Looking for a place to code, enjoy the sun, and live cheap with a group of friends? Let us be your concierge. Take a look at our list of locations with reliable infrastructure, low cost of living, and good weather.</p>
+    <p class="tagline-text">Looking for something a bit more affordable? Check out our <a href="">low season recommendations</a>. Or if money isn't an object, check out <a href="">what's hot now</a>.<p>
+    </div>
+    <div class="col-md-6" id="form">
+      <div>
+        <label>Choose a region:</label>
+      </div>
+      <div id="region-selection">
+
+        <div class="image-button" data-region="southeastasia" class="unselected">
+          <%= image_tag "southeastAsiaButton.jpg", size: "200x200" %>
+        </div>
+        <div class="image-button" data-region="centralamerica" class="unselected">
+          <%= image_tag "centralAmericaButton.jpg", size: "200x200" %>
+        </div>
+
+        <input class="image-input" name="region" type="hidden">
+      </div>
+      <div class="form-field">
+        <label>Start</label>
+        <input type="date">
+        <label>End</label>
+        <input type="date">
+    </div>
+    <div class="form-field">
+      <label>Number of People</label>
+      <input type="text">
+    </div>
+    <div id="search-button">
+      <input type="submit" value="Search">
+    </div>
+    <div>
+    </div>
+  </div>
+</div>
+

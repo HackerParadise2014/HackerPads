@@ -26,6 +26,10 @@ gem 'devise',       '3.4.0'
 # GeoCoder gem for map url generation from DB fields
 gem 'geocoder'
 
+gem 'bootstrap-sass', '~> 3.2.0'
+
+gem 'autoprefixer-rails'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 
