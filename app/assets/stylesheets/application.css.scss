@@ -15,12 +15,13 @@ body {
 
 .image-button {
   display: inline-block;
-  padding: 10px;
+  padding: 0px;
+  margin-right:5px;
   border: 2px solid transparent;
 }
 
 .selected {
-  border-color: orange;
+  border:3px solid orange;
 }
 
 footer {
@@ -29,10 +30,6 @@ footer {
 
 #tagline-title {
   padding: 40px 0px;
-}
-
-#region-selection {
-  padding-bottom: 40px;
 }
 
 .form-field {

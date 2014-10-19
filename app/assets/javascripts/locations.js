@@ -8,4 +8,18 @@ $(document).ready(function() {
 
     $region.find('input').val(this.getAttribute('data-region'));
   });
+
+  $( "#from" ).datepicker({
+      defaultDate: "+1w",
+      onClose: function( selectedDate ) {
+        $( "#to" ).datepicker( "option", "minDate", selectedDate );
+      }
+    });
+    $( "#to" ).datepicker({
+      defaultDate: "+1m 1w",
+      onClose: function( selectedDate ) {
+        $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+      }
+    });
+
 });
