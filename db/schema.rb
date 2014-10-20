@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20141019043741) do
+ActiveRecord::Schema.define(version: 20141019131146) do
 
   create_table "active_admin_comments", force: true do |t|
     t.string   "namespace"
@@ -45,6 +45,32 @@ ActiveRecord::Schema.define(version: 20141019043741) do
 
   add_index "admins", ["email"], name: "index_admins_on_email", unique: true
   add_index "admins", ["reset_password_token"], name: "index_admins_on_reset_password_token", unique: true
+
+  create_table "flights", force: true do |t|
+    t.string   "departure_code"
+    t.string   "arrival_code"
+    t.integer  "best_price"
+    t.integer  "avg_price"
+    t.string   "best_travel_month"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "location_id"
+  end
+
+  add_index "flights", ["location_id"], name: "index_flights_on_location_id"
+
+  create_table "internets", force: true do |t|
+    t.string   "ISP_name"
+    t.string   "data_type"
+    t.integer  "down_speed"
+    t.integer  "up_speed"
+    t.integer  "cost_per_mb"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "location_id"
+  end
+
+  add_index "internets", ["location_id"], name: "index_internets_on_location_id"
 
   create_table "locations", force: true do |t|
     t.string   "name"

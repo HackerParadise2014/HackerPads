@@ -15,8 +15,8 @@ Location.create(:name => 'North-West Hanoi', :city => 'Hoi An', :ctry => 'VN',
 Lodging.create(:location_id => Location.first, :name => "Evil Test Hotel", :city => 'Hanoi', :lodging_type => "Hotel", :price_per_night => 10.00, :beds => 5, :bedrooms => 1, :capacity => 11)
 Lodging.create(:location_id => Location.first, :name => "Nice Test Hotel", :city => 'Hanoi', :lodging_type => "Hotel", :price_per_night => 25.00, :beds => 4, :bedrooms => 4, :capacity => 5)
 # generate ISPs for Hanoi
-Internet.create(:location_id => Location.first, :ISP_name => "Good ISP Co", :data_type => "Internet", :down_speed => 25887, :up_speed => 4880, :cost_per_mb => null)
-Internet.create(:location_id => Location.first, :ISP_name => "Bad ISP Co", :data_type => "Internet", :down_speed => 11352, :up_speed => 1223, :cost_per_mb => null)
+Internet.create(:location_id => Location.first, :ISP_name => "Good ISP Co", :data_type => "Internet", :down_speed => 25887, :up_speed => 4880, :cost_per_mb => 5.00)
+Internet.create(:location_id => Location.first, :ISP_name => "Bad ISP Co", :data_type => "Internet", :down_speed => 11352, :up_speed => 1223, :cost_per_mb => 7.50)
 # generate flights into HAN
 Flight.create(:location_id => Location.first, :departure_code => "JFK", :arrival_code => "HAN", :best_price => 1233, :avg_price => 1421, :best_travel_month => "October")
 Flight.create(:location_id => Location.first, :departure_code => "EWR", :arrival_code => "HAN", :best_price => 1476, :avg_price => 1623, :best_travel_month => "October")

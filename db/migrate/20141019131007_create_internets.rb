@@ -5,7 +5,7 @@ class CreateInternets < ActiveRecord::Migration
       t.string      :data_type #mobile vs internet
       t.integer     :down_speed
       t.integer     :up_speed
-      t.integer     :cost_per_mb, :default => null
+      t.integer     :cost_per_mb
       t.timestamps
     end
   end

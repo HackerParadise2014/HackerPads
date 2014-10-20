@@ -1,22 +1,19 @@
 source  'https://rubygems.org'
 ruby    '2.1.3'
 
-gem 'rails',        '4.1.6'
-gem 'sass-rails',   '4.0.3'
-gem 'uglifier',     '2.5.3'
-gem 'coffee-rails', '4.0.1'
-gem 'jquery-rails', '3.1.2'
-gem 'turbolinks',   '2.4.0'
-gem 'jbuilder',     '2.2.2'
-gem 'sdoc',         '0.4.1',  group: :doc
-gem 'activeadmin',  github: 'activeadmin', ref: '05778f4'
-gem 'devise',       '3.4.0'
-gem 'geocoder'
-gem 'bootstrap-sass', '~> 3.2.0'
-gem 'autoprefixer-rails'
-
-# Use ActiveModel has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
+gem 'rails',              '4.1.6'
+gem 'sass-rails',         '4.0.3'
+gem 'uglifier',           '2.5.3'
+gem 'coffee-rails',       '4.0.1'
+gem 'jquery-rails',       '3.1.2'
+gem 'turbolinks',         '2.4.0'
+gem 'jbuilder',           '2.2.2'
+gem 'sdoc',               '0.4.1',  group: :doc
+gem 'activeadmin',        github: 'activeadmin', ref: '05778f4'
+gem 'devise',             '3.4.0'
+gem 'geocoder',           '1.2.5'
+gem 'bootstrap-sass',     '3.2.0.2'
+gem 'autoprefixer-rails', '3.1.2.20141016'
 
 # Use unicorn as the app server
 # gem 'unicorn'
