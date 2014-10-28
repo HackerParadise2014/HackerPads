@@ -1,6 +1,6 @@
 class LocationsController < ApplicationController
 
-  before_filter :validate_dates, only: :search
+  before_filter :validate_dates, :validate_participants, only: :search
 
   def index
   end
@@ -25,4 +25,15 @@ class LocationsController < ApplicationController
       @date_to = Date.today + 1.month
     end
   end
+
+  def validate_participants
+    # check that particiapants is a positive integer
+    if params[:participants].to_i >= 1
+      @participants = params[:participants].to_i
+    else
+      # set to default value of 1 for negative numbers, text, etc
+      @participants = 1
+    end
+  end
+
 end
