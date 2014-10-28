@@ -15,7 +15,9 @@ class LocationsController < ApplicationController
   private
 
   def validate_dates
-    if params && params[:from] && params[:to]
+    # changed validation checks to look for "" and not true, 
+    # as default values were evaluating to true, causing errors.
+    if params[:from] != "" && params[:to] != ""
       @date_from = Date.strptime(params[:from], "%m/%d/%Y")
       @date_to = Date.strptime(params[:to], "%m/%d/%Y")
     else
@@ -23,5 +25,4 @@ class LocationsController < ApplicationController
       @date_to = Date.today + 1.month
     end
   end
-
 end
